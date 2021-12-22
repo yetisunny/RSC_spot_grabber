@@ -6,7 +6,6 @@ import getpass
 
 # chromedriver paths
 dirname = os.path.dirname(os.path.abspath(__file__))
-print(dirname)
 browser = webdriver.Chrome(executable_path=dirname + "/chromedriver")
 
 
