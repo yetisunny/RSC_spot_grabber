@@ -65,10 +65,15 @@ def user_input():
         for i, t in enumerate(possible_times):
             print(str.format("Option {0}: {1}", i, t))
         input_val = input()
-        choices = list(map(int, input_val.split(",")))
-        # put times in the desired_times list
-        for choice in choices:
-            desired_times.append(possible_times[choice])
+        try:
+            choices = list(map(int, input_val.split(",")))
+            # put times in the desired_times list
+            for choice in choices:
+                desired_times.append(possible_times[choice])
+        except:
+            print("You did not enter the choices properly, try again")
+
+            continue
 
         cls()
         print(
