@@ -128,6 +128,7 @@ def expand_table():
         ).click()
     except:
         print("Something went wrong, maybe you entered a wrong password, idk")
+        browser.close()
         exit(0)
 
 
