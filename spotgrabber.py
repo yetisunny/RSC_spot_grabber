@@ -4,7 +4,9 @@ import os
 import getpass
 
 
-browser = webdriver.Chrome(executable_path="/home/luuk/RSC-Script/chromedriver")
+# chromedriver paths
+dirname = os.path.dirname(__file__)
+browser = webdriver.Chrome(executable_path=dirname + "/RSC_spot_grabber/chromedriver")
 
 
 userName = ""
