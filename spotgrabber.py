@@ -123,6 +123,7 @@ def login():
     ).click()
 
 
+# expand the fitness table on the RSC website
 def expand_table():
     try:
         browser.get("https://publiek.usc.ru.nl/publiek/laanbod.php")
@@ -137,9 +138,7 @@ def expand_table():
         exit(0)
 
 
-interesting_rows = []
-
-
+# look at the table and see if there is a desireable spot, if so take it
 def fetch_and_take_spot():
     interesting_rows = []
     time.sleep(1)
@@ -185,7 +184,7 @@ def take_spot(row_nr):
     value = browser.find_element_by_xpath(
         "//*[@class= 'responstable clickabletr']/tbody/tr[" + str(row_nr) + "]"
     ).click()
-
+    # click on all necessary things to secure a spot
     browser.find_element_by_xpath("/html/body/div[3]/article/div/div[1]/div/a ").click()
     browser.find_element_by_xpath("/html/body/div[3]/article/a[2]").click()
     browser.find_element_by_xpath(
