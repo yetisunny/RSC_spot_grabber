@@ -59,7 +59,6 @@ def user_input():
         print("'wo 22 dec 2021' or 'di 7 jan 2022' or 'za 13 dec 2021'")
         input_val = input()
         desired_day = input_val
-        cls()
         # Now get the times they would like
         print("Enter you desired timeslot options seperated by a comma")
         for i, t in enumerate(possible_times):
@@ -75,7 +74,7 @@ def user_input():
 
             continue
 
-        cls()
+        
         print(
             str.format(
                 "The script will try to get a spot for "
@@ -89,7 +88,6 @@ def user_input():
         print(desired_times)
         print("Type Y to continue and attempt to fetch a spot or N to try again")
         if input() != "Y":
-            cls()
             continue
         else:
             user_satisfied = True
@@ -100,7 +98,7 @@ def user_input():
     print("Enter your password")
     global userPassword
     userPassword = getpass.getpass()
-    cls()
+    
 
 
 # to clear the terminal
